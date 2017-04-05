@@ -38,7 +38,7 @@ public:
 	{
 		//Condicionales que determinan el limite que tiene el elemento
 		//Determinig conditions of the element's limit 
-		if (x >= 79)
+		if (x >= 78)
 		{
 			numx = -1;
 		}
@@ -59,7 +59,13 @@ public:
 		x = x + numx;
 		y = y + numy;
 		gotoxy(x, y);
-		cout << ":)" << endl;
+		cout << ":)";
+	}
+	//Función para borrar el elemento
+	//Function to erase the element
+	void borrar() {
+		gotoxy(x, y);
+		cout << "  ";
 	}
 };
 
@@ -74,7 +80,12 @@ int main()
 		Caracter3.rebotar();
 		Caracter4.rebotar();
 		Caracter5.rebotar();
-		system("cls");
+		Sleep(120);
+		Caracter.borrar();
+		Caracter2.borrar();
+		Caracter3.borrar();
+		Caracter4.borrar();
+		Caracter5.borrar();
 	}
 	return 0;
 }
